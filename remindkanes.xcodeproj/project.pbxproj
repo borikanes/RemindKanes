@@ -14,6 +14,7 @@
 		5189CC741FE45E8800AA6D47 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5189CC721FE45E8800AA6D47 /* LaunchScreen.storyboard */; };
 		5189CC7F1FE45E8800AA6D47 /* remindkanesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5189CC7E1FE45E8800AA6D47 /* remindkanesTests.swift */; };
 		5189CC8A1FE45E8800AA6D47 /* remindkanesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5189CC891FE45E8800AA6D47 /* remindkanesUITests.swift */; };
+		5189CE091FE4FC5E00AA6D47 /* RKListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5189CE081FE4FC5E00AA6D47 /* RKListTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		5189CC851FE45E8800AA6D47 /* remindkanesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = remindkanesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5189CC891FE45E8800AA6D47 /* remindkanesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = remindkanesUITests.swift; sourceTree = "<group>"; };
 		5189CC8B1FE45E8800AA6D47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5189CE081FE4FC5E00AA6D47 /* RKListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RKListTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 		5189CC681FE45E8800AA6D47 /* remindkanes */ = {
 			isa = PBXGroup;
 			children = (
+				5189CE071FE4FC1400AA6D47 /* TableViewCells */,
 				5189CC691FE45E8800AA6D47 /* AppDelegate.swift */,
 				5189CC6B1FE45E8800AA6D47 /* MainViewController.swift */,
 				5189CC6D1FE45E8800AA6D47 /* Main.storyboard */,
@@ -123,6 +126,14 @@
 				5189CC8B1FE45E8800AA6D47 /* Info.plist */,
 			);
 			path = remindkanesUITests;
+			sourceTree = "<group>";
+		};
+		5189CE071FE4FC1400AA6D47 /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				5189CE081FE4FC5E00AA6D47 /* RKListTableViewCell.swift */,
+			);
+			path = TableViewCells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,6 +272,7 @@
 			files = (
 				5189CC6C1FE45E8800AA6D47 /* MainViewController.swift in Sources */,
 				5189CC6A1FE45E8800AA6D47 /* AppDelegate.swift in Sources */,
+				5189CE091FE4FC5E00AA6D47 /* RKListTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
