@@ -11,6 +11,8 @@ import UIKit
 class MainViewController: UIViewController {
 
     @IBOutlet var mainTableView: UITableView!
+    let cellIdentifier = "todoInfoCell"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -47,7 +49,10 @@ extension MainViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! RKListTableViewCell
+        
+        
+        return cell
     }
     
     
