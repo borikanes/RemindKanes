@@ -12,6 +12,8 @@ class MainViewController: UIViewController {
 
     @IBOutlet var mainTableView: UITableView!
     let cellIdentifier = "todoInfoCell"
+   
+    var toDos: [ToDoItem] = [ToDoItem(title: "Do Laundry", detail: "4pm"), ToDoItem(title: "Eat lunch with friends", detail: "12pm")]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,16 +47,22 @@ class MainViewController: UIViewController {
 
 extension MainViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return toDos.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! RKListTableViewCell
+        let currentTodo = toDos[indexPath.row]
+        cell.todoTitle.text = currentTodo.title
+        cell.todoDetailLabel.text = currentTodo.detail
         
+        cell.checkedButton.layer.cornerRadius = 0.5 * cell.checkedButton.bounds.size.width
+        cell.checkedButton.clipsToBounds = true
+        cell.checkedButton.layer.borderColor = UIColor.gray.cgColor
+        cell.checkedButton.layer.borderWidth = 1.0
         
         return cell
     }
-    
     
 }
 
